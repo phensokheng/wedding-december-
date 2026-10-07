@@ -1,0 +1,106 @@
+ /* Hide Alpine elements until Alpine has loaded */
+        [x-cloak] { display: none !important; }
+
+        /* width */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 5px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        /* =====================================================
+           FRONT PAGE SETTINGS - PUT YOUR FRONT PAGE IMAGE HERE
+           (file name or full https:// link)
+           ===================================================== */
+        :root {
+            --front-image: url('AP3I9139.jpg');
+        }
+
+        html { scroll-behavior: smooth; }
+        body.front-locked { overflow: hidden; }
+
+        #front-page {
+            position: relative;
+            min-height: 100vh;
+            min-height: 100svh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            padding: 48px 20px;
+            background-image: var(--front-image);
+            background-size: cover;
+            background-position: center;
+        }
+        #front-page::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,.45), rgba(0,0,0,.25) 40%, rgba(0,0,0,.65));
+        }
+        #front-page .fp-content { position: relative; z-index: 1; width: 100%; max-width: 420px; }
+        #front-page .fp-title {
+            font-family: 'Moul', serif;
+            font-size: 1.5rem;
+            line-height: 1.8;
+            color: #f3d98b;
+            text-shadow: 0 2px 4px rgba(0,0,0,.6);
+        }
+        #front-page .fp-sub { font-family: 'Great Vibes', cursive; font-size: 2rem; margin-top: 4px; }
+        #front-page .fp-names {
+            font-family: 'Dangrek', sans-serif;
+            font-size: 2rem;
+            line-height: 1.6;
+            margin: 48px 0 36px;
+            text-shadow: 0 2px 4px rgba(0,0,0,.7);
+        }
+        #front-page .fp-names img { height: 48px; margin: 0 auto; display: block; }
+        #front-page .fp-invite { font-family: 'Moulpali', serif; font-size: .95rem; margin-bottom: 8px; }
+        #front-page .fp-frame {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 300px;
+            max-width: 100%;
+            height: 50px;
+            background: url('https://theapka.com/storage/templates/chhay/images/frame_1.png') center / 100% 100% no-repeat;
+            font-family: 'Kantumruy Pro', sans-serif;
+            font-weight: 600;
+            padding: 0 16px;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        #front-page .fp-btn {
+            display: inline-block;
+            margin-top: 36px;
+            padding: 12px 40px;
+            border: 0;
+            border-radius: 999px;
+            background: #d4a437;
+            color: #fff;
+            font-family: 'Moulpali', serif;
+            font-size: 1.1rem;
+            cursor: pointer;
+            box-shadow: 0 6px 16px rgba(0,0,0,.4);
+            animation: fpBreathe 2s ease-in-out infinite;
+        }
+        #front-page .fp-btn:hover { background: #b98b25; }
+        @keyframes fpBreathe {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.06); }
+        }
