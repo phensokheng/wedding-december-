@@ -1,108 +1,138 @@
-/* Hide Alpine elements until Alpine has loaded */
-[x-cloak] { display: none !important; }
+ /* =====================================================
+       1) IMAGE SETTINGS - PUT YOUR IMAGES HERE
+          (file name or full https:// link)
+       ===================================================== */
+    :root {
+        --front-image:     url('AP3I9139.jpg');   /* front page (first screen) */
+        --cover-image:     url('AP3I9139.jpg');   /* invitation cover */
+        --schedule-image:  url('https://theapka.com/storage/01J4TYV5XJP7PKF7RPH3KE6238.jpg');
+        --thank-you-image: url('https://theapka.com/storage/01J4TYXR517E73RV2PRB75Y5ME.jpg');
+    }
 
-/* width */
-::-webkit-scrollbar {
-    width: 10px;
-}
+    /* =====================================================
+       2) BASE
+       ===================================================== */
+    /* Hide Alpine elements until Alpine has loaded */
+    [x-cloak] { display: none !important; }
 
-/* Track */
-::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
+    html { scroll-behavior: smooth; }
+    body.front-locked { overflow: hidden; }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 5px;
-}
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: #f1f1f1; }
+    ::-webkit-scrollbar-thumb { background: #888; border-radius: 5px; }
+    ::-webkit-scrollbar-thumb:hover { background: #555; }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
+    /* =====================================================
+       3) FRONT PAGE
+       ===================================================== */
+    #front-page {
+        position: relative;
+        min-height: 100vh;
+        min-height: 100svh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+        padding: 48px 20px;
+        background-image: var(--front-image);
+        background-size: cover;
+        background-position: center;
+    }
+    #front-page::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom, rgba(0,0,0,.45), rgba(0,0,0,.25) 40%, rgba(0,0,0,.65));
+    }
+    #front-page .fp-content { position: relative; z-index: 1; width: 100%; max-width: 420px; }
+    #front-page .fp-title {
+        font-family: 'Moul', serif;
+        font-size: 1.5rem;
+        line-height: 1.8;
+        color: #f3d98b;
+        text-shadow: 0 2px 4px rgba(0,0,0,.6);
+    }
+    #front-page .fp-sub { font-family: 'Great Vibes', cursive; font-size: 2rem; margin-top: 4px; }
+    #front-page .fp-names {
+        font-family: 'Dangrek', sans-serif;
+        font-size: 2rem;
+        line-height: 1.6;
+        margin: 48px 0 36px;
+        text-shadow: 0 2px 4px rgba(0,0,0,.7);
+    }
+    #front-page .fp-names img { height: 48px; margin: 0 auto; display: block; }
+    #front-page .fp-invite { font-family: 'Moulpali', serif; font-size: .95rem; margin-bottom: 8px; }
+    #front-page .fp-frame {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        max-width: 100%;
+        height: 50px;
+        background: url('https://theapka.com/storage/templates/chhay/images/frame_1.png') center / 100% 100% no-repeat;
+        font-family: 'Kantumruy Pro', sans-serif;
+        font-weight: 600;
+        padding: 0 16px;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    #front-page .fp-btn {
+        display: inline-block;
+        margin-top: 36px;
+        padding: 12px 40px;
+        border: 0;
+        border-radius: 999px;
+        background: #d4a437;
+        color: #fff;
+        font-family: 'Moulpali', serif;
+        font-size: 1.1rem;
+        cursor: pointer;
+        box-shadow: 0 6px 16px rgba(0,0,0,.4);
+        animation: fpBreathe 2s ease-in-out infinite;
+    }
+    #front-page .fp-btn:hover { background: #b98b25; }
+    @keyframes fpBreathe {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.06); }
+    }
 
-/* =====================================================
-   FRONT PAGE SETTINGS - PUT YOUR FRONT PAGE IMAGE HERE
-   (file name or full https:// link)
-   ===================================================== */
-:root {
-    --front-image: url('AP3I9139.jpg');
-}
+    /* =====================================================
+       4) INVITATION SECTION BACKGROUNDS
+       ===================================================== */
+    #theapka-cover               { background-image: var(--cover-image); }
+    #theapka-schedule-background { background-image: var(--schedule-image); }
+    #theapka-thank-you           { background-image: var(--thank-you-image); }
 
-html { scroll-behavior: smooth; }
-body.front-locked { overflow: hidden; }
+    /* Thank-you box */
+    #theapka-thank-you .thank-box { background: #cfbdb470; }
 
-#front-page {
-    position: relative;
-    min-height: 100vh;
-    min-height: 100svh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-    padding: 48px 20px;
-    background-image: var(--front-image);
-    background-size: cover;
-    background-position: center;
-}
-#front-page::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,.45), rgba(0,0,0,.25) 40%, rgba(0,0,0,.65));
-}
-#front-page .fp-content { position: relative; z-index: 1; width: 100%; max-width: 420px; }
-#front-page .fp-title {
-    font-family: 'Moul', serif;
-    font-size: 1.5rem;
-    line-height: 1.8;
-    color: #f3d98b;
-    text-shadow: 0 2px 4px rgba(0,0,0,.6);
-}
-#front-page .fp-sub { font-family: 'Great Vibes', cursive; font-size: 2rem; margin-top: 4px; }
-#front-page .fp-names {
-    font-family: 'Dangrek', sans-serif;
-    font-size: 2rem;
-    line-height: 1.6;
-    margin: 48px 0 36px;
-    text-shadow: 0 2px 4px rgba(0,0,0,.7);
-}
-#front-page .fp-names img { height: 48px; margin: 0 auto; display: block; }
-#front-page .fp-invite { font-family: 'Moulpali', serif; font-size: .95rem; margin-bottom: 8px; }
-#front-page .fp-frame {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 300px;
-    max-width: 100%;
-    height: 50px;
-    background: url('https://theapka.com/storage/templates/chhay/images/frame_1.png') center / 100% 100% no-repeat;
-    font-family: 'Kantumruy Pro', sans-serif;
-    font-weight: 600;
-    padding: 0 16px;
-    white-space: nowrap;
-    overflow: hidden;
-}
-#front-page .fp-btn {
-    display: inline-block;
-    margin-top: 36px;
-    padding: 12px 40px;
-    border: 0;
-    border-radius: 999px;
-    background: #d4a437;
-    color: #fff;
-    font-family: 'Moulpali', serif;
-    font-size: 1.1rem;
-    cursor: pointer;
-    box-shadow: 0 6px 16px rgba(0,0,0,.4);
-    animation: fpBreathe 2s ease-in-out infinite;
-}
-#front-page .fp-btn:hover { background: #b98b25; }
-@keyframes fpBreathe {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.06); }
-}
+    /* =====================================================
+       5) MUSIC BUTTON
+       ===================================================== */
+    #music-btn {
+        position: fixed;
+        bottom: 16px;
+        right: 16px;
+        z-index: 60;
+        width: 44px;
+        height: 44px;
+        border: 0;
+        border-radius: 50%;
+        background: rgba(0,0,0,.45);
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+        display: none;   /* shown after the guest clicks open */
+    }
 
-font-invite { font-size: 1.2rem; }
+    /* =====================================================
+       6) ADD TO CALENDAR BUTTON
+       ===================================================== */
+    add-to-calendar-button {
+        visibility: visible;
+        opacity: 1;
+        position: relative;
+    }
