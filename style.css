@@ -1,138 +1,214 @@
- /* =====================================================
-       1) IMAGE SETTINGS - PUT YOUR IMAGES HERE
-          (file name or full https:// link)
+
+how to save song on youtube not the video
+If you want to save only the song/audio from YouTube without downloading the video, there are a few ways:
+
+1. YouTube Music (official way)
+YouTube Music getting more obvious shuffle and repeat buttons
+Open YouTube Music.
+
+Search for your song.
+
+Add it to your library or playlist.
+
+With YouTube Music Premium, you can download songs for offline listening.
+
+2. Save a song to your playlist
+If you just want to keep the song for later:
+
+Open YouTube.
+
+Find the song.
+
+Click Save.
+
+Choose a playlist.
+
+3. Download MP3
+If you need an actual MP3 audio file on your computer, use an official download provided by the copyright owner or a source that permits downloading.
+
+One question: Do you want to save it as an MP3 file on your MSI laptop, or just listen offline without the video?
+
+yes mp3
+Got it! You want an MP3 audio file on your MSI laptop, without downloading the video.
+
+Here's what you can do:
+
+Find the song on YouTube.
+
+Check whether the artist or copyright owner provides an MP3 download.
+
+Download the audio file from their official website or an authorized music store.
+
+Save it in your laptop's Music folder.
+
+You can then play it using VLC Media Player or Windows Media Player.
+
+Is the song from a normal YouTube video or YouTube Music?
+
+you tube
+Okay! Since it's from normal YouTube, you want to extract just the audio as an .mp3 file.
+
+The safest way is to:
+
+Open the YouTube song.
+
+Check the video description for an official audio download.
+
+If the creator provides an MP3 download, download it to your laptop.
+
+Save it in your Music folder.
+
+If there's no authorized download, YouTube doesn't provide a built-in MP3 export option.
+
+You can send me the YouTube song link, and I can help you find an authorized way to get the audio.
+
+
+Pasted text.txt
+Document
+can you seperate it for me between CSS and html
+
+Of course! I've separated your wedding invitation code into two files.
+
+index.html
+
+HTML structure and JavaScript
+
+Download HTML
+styles.css
+
+All extracted CSS styles
+
+Download CSS
+Or download both together:
+
+Download HTML + CSS (ZIP)
+
+How to use them
+Put index.html and styles.css in the same folder.
+
+Open index.html using VS Code.
+
+Run it with Live Server.
+
+Important: I kept your JavaScript inside HTML and your existing content. I only separated the CSS.
+
+
+index.html
+HTML
+
+styles.css
+Code
+
+
+
+
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      padding: 12% 24px 7%;
+    }
+     .title {
+      font-family: 'Moulpali', serif;
+      font-weight: 400;
+      font-size: 2rem;
+      line-height: 1.6;
+      color: var(--title-color);
+      text-shadow: 0 2px 10px rgba(0, 0, 0, .45), 0 0 18px rgba(255, 240, 200, .35);
+    }
+     .script {
+      position: relative;
+      display: inline-block;
+      padding: 4px 28px;
+      font-family: 'Great Vibes', cursive;
+      font-size: 2rem;
+      color: var(--gold);
+      text-shadow: 0 2px 6px rgba(0, 0, 0, .4);
+    }
+    .script::before,
+    .script::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      width: 60%;
+      height: 1px;
+      transform: translateX(-50%);
+      background: linear-gradient(to right, transparent, var(--gold), transparent);
+    }
+    .script::before { top: 0; }
+    .script::after  { bottom: 0; }
+    .names {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-top: 10px;
+      font-family: 'Dangrek', sans-serif;
+      font-size: 2.2rem;
+      line-height: 1.4;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, .5);
+    }
+    .names svg { width: 38px; height: 38px; flex: 0 0 auto; opacity: .9; }
+    .save {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+      font-size: .9rem;
+      letter-spacing: .25em;
+      color: var(--gold);
+    }
+    .date-km { margin-top: 8px; font-size: 1.2rem; font-weight: 600; }
+    .time-km { margin-top: 6px; font-size: 1.05rem; }
+    .date-num {
+      margin-top: 14px;
+      font-family: 'Ovo', serif;
+      font-size: 1rem;
+      letter-spacing: .08em;
+      color: rgba(255, 255, 255, .75);
+    }
+    .place {
+      margin-top: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-size: .95rem;
+      font-weight: 600;
+    }
+    .place svg { width: 18px; height: 18px; flex: 0 0 auto; }
+     /* =====================================================
+       5) FALLING PETALS
        ===================================================== */
-    :root {
-        --front-image:     url('AP3I9139.jpg');   /* front page (first screen) */
-        --cover-image:     url('AP3I9139.jpg');   /* invitation cover */
-        --schedule-image:  url('https://theapka.com/storage/01J4TYV5XJP7PKF7RPH3KE6238.jpg');
-        --thank-you-image: url('https://theapka.com/storage/01J4TYXR517E73RV2PRB75Y5ME.jpg');
+    .petal {
+      position: absolute;
+      top: -20px;
+      z-index: 1;
+      background: #f7b98f;            /* petal color */
+      border-radius: 50% 0 50% 50%;
+      opacity: .85;
+      pointer-events: none;
+      animation: fall linear infinite;
+    }
+    @keyframes fall {
+      0%   { transform: translate(0, 0) rotate(0deg); }
+      50%  { transform: translate(30px, 400px) rotate(180deg); }
+      100% { transform: translate(-10px, 820px) rotate(360deg); }
     }
 
-    /* =====================================================
-       2) BASE
-       ===================================================== */
-    /* Hide Alpine elements until Alpine has loaded */
-    [x-cloak] { display: none !important; }
-
-    html { scroll-behavior: smooth; }
-    body.front-locked { overflow: hidden; }
-
-    /* Scrollbar */
-    ::-webkit-scrollbar { width: 10px; }
-    ::-webkit-scrollbar-track { background: #f1f1f1; }
-    ::-webkit-scrollbar-thumb { background: #888; border-radius: 5px; }
-    ::-webkit-scrollbar-thumb:hover { background: #555; }
-
-    /* =====================================================
-       3) FRONT PAGE
-       ===================================================== */
-    #front-page {
-        position: relative;
-        min-height: 100vh;
-        min-height: 100svh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: #fff;
-        padding: 48px 20px;
-        background-image: var(--front-image);
-        background-size: cover;
-        background-position: center;
-    }
-    #front-page::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(to bottom, rgba(0,0,0,.45), rgba(0,0,0,.25) 40%, rgba(0,0,0,.65));
-    }
-    #front-page .fp-content { position: relative; z-index: 1; width: 100%; max-width: 420px; }
-    #front-page .fp-title {
-        font-family: 'Moul', serif;
-        font-size: 1.5rem;
-        line-height: 1.8;
-        color: #f3d98b;
-        text-shadow: 0 2px 4px rgba(0,0,0,.6);
-    }
-    #front-page .fp-sub { font-family: 'Great Vibes', cursive; font-size: 2rem; margin-top: 4px; }
-    #front-page .fp-names {
-        font-family: 'Dangrek', sans-serif;
-        font-size: 2rem;
-        line-height: 1.6;
-        margin: 48px 0 36px;
-        text-shadow: 0 2px 4px rgba(0,0,0,.7);
-    }
-    #front-page .fp-names img { height: 48px; margin: 0 auto; display: block; }
-    #front-page .fp-invite { font-family: 'Moulpali', serif; font-size: .95rem; margin-bottom: 8px; }
-    #front-page .fp-frame {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 300px;
-        max-width: 100%;
-        height: 50px;
-        background: url('https://theapka.com/storage/templates/chhay/images/frame_1.png') center / 100% 100% no-repeat;
-        font-family: 'Kantumruy Pro', sans-serif;
-        font-weight: 600;
-        padding: 0 16px;
-        white-space: nowrap;
-        overflow: hidden;
-    }
-    #front-page .fp-btn {
-        display: inline-block;
-        margin-top: 36px;
-        padding: 12px 40px;
-        border: 0;
-        border-radius: 999px;
-        background: #d4a437;
-        color: #fff;
-        font-family: 'Moulpali', serif;
-        font-size: 1.1rem;
-        cursor: pointer;
-        box-shadow: 0 6px 16px rgba(0,0,0,.4);
-        animation: fpBreathe 2s ease-in-out infinite;
-    }
-    #front-page .fp-btn:hover { background: #b98b25; }
-    @keyframes fpBreathe {
-        0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.06); }
+    /* phones */
+    @media (max-width: 480px) {
+      .title { font-size: 1.7rem; }
+      .names { font-size: 1.9rem; }
     }
 
-    /* =====================================================
-       4) INVITATION SECTION BACKGROUNDS
-       ===================================================== */
-    #theapka-cover               { background-image: var(--cover-image); }
-    #theapka-schedule-background { background-image: var(--schedule-image); }
-    #theapka-thank-you           { background-image: var(--thank-you-image); }
 
-    /* Thank-you box */
-    #theapka-thank-you .thank-box { background: #cfbdb470; }
-
-    /* =====================================================
-       5) MUSIC BUTTON
-       ===================================================== */
-    #music-btn {
-        position: fixed;
-        bottom: 16px;
-        right: 16px;
-        z-index: 60;
-        width: 44px;
-        height: 44px;
-        border: 0;
-        border-radius: 50%;
-        background: rgba(0,0,0,.45);
-        color: #fff;
-        font-size: 20px;
-        cursor: pointer;
-        display: none;   /* shown after the guest clicks open */
-    }
-
-    /* =====================================================
-       6) ADD TO CALENDAR BUTTON
-       ===================================================== */
-    add-to-calendar-button {
-        visibility: visible;
-        opacity: 1;
-        position: relative;
-    }
+    .silver {
+    background: linear-gradient(180deg, #ffffff 0%, #d9dde3 50%, #b8bec7 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(2px 2px 3px rgba(0,0,0,.8));
+}
