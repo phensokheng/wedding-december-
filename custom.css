@@ -1,0 +1,406 @@
+css
+/* =====================================================
+   1) SETTINGS - PUT YOUR IMAGES HERE
+      (file name or full https:// link)
+   ===================================================== */
+:root {
+  --front-image: url('AP3I9359.jpg');   /* front page (before clicking open) */
+  --card-image:  url('AP3I9364.jpg');   /* cover card (after clicking open) */
+  --page-image:  none;                  /* optional picture behind the card */
+
+  --gold: #e8c77d;                      /* gold used for small text and icons */
+  --title-color: #f4e6b8;               /* big title color in the card */
+}
+
+/* =====================================================
+   2) BASE
+   ===================================================== */
+/* Hide Alpine elements until Alpine has loaded */
+[x-cloak] { display: none !important; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+body.front-locked { overflow: hidden; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #888; border-radius: 5px; }
+::-webkit-scrollbar-thumb:hover { background: #555; }
+
+/* =====================================================
+   3) FRONT PAGE (before clicking open)
+   ===================================================== */
+#front-page {
+  position: relative;
+  width: 100%;
+  max-width: 36rem;          /* same width as the other pages (576px) */
+  margin: 0 auto;            /* centered */
+  min-height: 100vh;
+  min-height: 100svh;        /* full screen height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 48px 20px;
+  background-image: var(--front-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#front-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,.45), rgba(0,0,0,.25) 40%, rgba(0,0,0,.65));
+}
+#front-page .fp-content { position: relative; z-index: 1; width: 100%; max-width: 420px; }
+#front-page .fp-title {
+  font-family: 'Moul', serif;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #f3d98b;
+  text-shadow: 0 2px 4px rgba(0,0,0,.6);
+}
+#front-page .fp-sub { font-family: 'Great Vibes', cursive; font-size: 2rem; margin-top: 4px; }
+#front-page .fp-names {
+  font-family: 'Dangrek', sans-serif;
+  font-size: 2rem;
+  line-height: 1.6;
+  margin: 48px 0 36px;
+  text-shadow: 0 2px 4px rgba(0,0,0,.7);
+}
+#front-page .fp-names img { height: 48px; margin: 0 auto; display: block; }
+#front-page .fp-invite { font-family: 'Moulpali', serif; font-size: .95rem; margin-bottom: 8px; }
+#front-page .fp-frame {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  max-width: 100%;
+  height: 50px;
+  background: url('https://theapka.com/storage/templates/chhay/images/frame_1.png') center / 100% 100% no-repeat;
+  font-family: 'Kantumruy Pro', sans-serif;
+  font-weight: 600;
+  padding: 0 16px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+#front-page .fp-btn {
+  display: inline-block;
+  margin-top: 36px;
+  padding: 12px 40px;
+  border: 0;
+  border-radius: 999px;
+  background: #d4a437;
+  color: #fff;
+  font-family: 'Moulpali', serif;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0,0,0,.4);
+  animation: fpBreathe 2s ease-in-out infinite;
+}
+#front-page .fp-btn:hover { background: #b98b25; }
+@keyframes fpBreathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
+
+/* Names drop down slowly, line by line */
+.drop-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+.drop-line span {
+  display: inline-block;
+  opacity: 0;
+  animation: slowDrop 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  animation-delay: calc(var(--i) * 0.3s);
+}
+@keyframes slowDrop {
+  0%   { opacity: 0; transform: translateY(-40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* =====================================================
+   4) COVER CARD (after clicking open)
+   ===================================================== */
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background-image: var(--card-image);
+  background-size: cover;
+  background-position: center;
+}
+
+/* dark fade: light at the top, dark at the bottom */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+    rgba(60, 40, 20, .35) 0%,
+    rgba(0, 0, 0, 0) 30%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(20, 12, 6, .92) 100%);
+}
+
+/* thin inner border line */
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border: 1px solid rgba(255, 255, 255, .35);
+  border-radius: 22px;
+  pointer-events: none;
+}
+
+.card-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 12% 24px 7%;
+}
+
+/* big title at the top */
+.title {
+  font-family: 'Moulpali', serif;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 1.6;
+  color: var(--title-color);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, .45), 0 0 18px rgba(255, 240, 200, .35);
+}
+
+/* "The Wedding Day" with a thin line above and below */
+.script {
+  position: relative;
+  display: inline-block;
+  padding: 4px 28px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  color: var(--gold);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, .4);
+}
+.script::before,
+.script::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 60%;
+  height: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+}
+.script::before { top: 0; }
+.script::after  { bottom: 0; }
+
+/* names with the gold heart between */
+.names {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 10px;
+  font-family: 'Dangrek', sans-serif;
+  font-size: 2.2rem;
+  line-height: 1.4;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, .5);
+}
+.names svg { width: 38px; height: 38px; flex: 0 0 auto; opacity: .9; }
+
+/* bottom information */
+.save {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: .9rem;
+  letter-spacing: .25em;
+  color: var(--gold);
+}
+.date-km { margin-top: 8px; font-size: 1.2rem; font-weight: 600; }
+.time-km { margin-top: 6px; font-size: 1.05rem; }
+.date-num {
+  margin-top: 14px;
+  font-family: 'Ovo', serif;
+  font-size: 1rem;
+  letter-spacing: .08em;
+  color: rgba(255, 255, 255, .75);
+}
+.place {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: .95rem;
+  font-weight: 600;
+}
+.place svg { width: 18px; height: 18px; flex: 0 0 auto; }
+
+/* falling petals inside the card */
+.petal {
+  position: absolute;
+  top: -20px;
+  z-index: 1;
+  background: #f7b98f;            /* petal color */
+  border-radius: 50% 0 50% 50%;
+  opacity: .85;
+  pointer-events: none;
+  animation: fall linear infinite;
+}
+@keyframes fall {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  50%  { transform: translate(30px, 400px) rotate(180deg); }
+  100% { transform: translate(-10px, 820px) rotate(360deg); }
+}
+
+/* phones */
+@media (max-width: 480px) {
+  .title { font-size: 1.7rem; }
+  .names { font-size: 1.9rem; }
+}
+
+/* =====================================================
+   5) FALLING GOLD HEARTS (start after clicking open)
+   ===================================================== */
+.gold-heart {
+  position: fixed;
+  top: -40px;
+  z-index: 10;
+  width: 18px;
+  height: 18px;
+  /* soft glowing golden color */
+  background: linear-gradient(135deg, #fff3c4 0%, #fae199 50%, #f0c965 100%);
+  box-shadow: 0 0 10px rgba(255, 243, 196, 0.6), 0 2px 5px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+  animation: goldHeartFall linear infinite;
+  /* CSS heart shape */
+  display: inline-block;
+  transform: rotate(-45deg);
+}
+/* the two top humps of the heart */
+.gold-heart::before,
+.gold-heart::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: inherit;
+}
+.gold-heart::before { top: -9px; left: 0; }
+.gold-heart::after  { left: 9px; top: 0; }
+
+@keyframes goldHeartFall {
+  0% {
+    transform: translate(0, 0) rotate(-45deg) scale(0.8);
+    opacity: 0;
+  }
+  10% { opacity: 0.95; }
+  50% {
+    transform: translate(60px, 50vh) rotate(-135deg) scale(1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(-30px, 105vh) rotate(-225deg) scale(0.9);
+    opacity: 0.1;
+  }
+}
+
+/* =====================================================
+   6) SCHEDULE (numbered list)
+   ===================================================== */
+.sch {
+  position: relative;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 32px 0 40px;
+}
+.sch::before {               /* light overlay so the text is easy to read */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,.88);
+}
+.sch-inner { position: relative; z-index: 1; padding: 0 20px; text-align: center; }
+.sch-title {
+  font-family: 'Moulpali', serif;
+  font-size: 1.5rem;
+  color: #d4900f;
+}
+.sch-ornament { height: 28px; margin: 12px auto 0; display: block; }
+.sch-date {
+  display: inline-block;
+  margin: 28px 0 32px;
+  padding: 8px 28px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.75);
+  box-shadow: 0 0 14px 6px rgba(255,255,255,.9);
+  font-family: 'Kantumruy Pro', sans-serif;
+  font-weight: 700;
+  color: #4a86c8;
+}
+.sch-list { text-align: left; }
+.sch-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.sch-num {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #dbe8ff;
+  color: #3b82f6;
+  font-family: 'Roboto', sans-serif;
+  font-size: .85rem;
+}
+.sch-time {
+  font-family: 'Kantumruy Pro', sans-serif;
+  font-size: .95rem;
+  color: #9aa3b8;
+  line-height: 1.5;
+}
+.sch-desc {
+  font-family: 'Kantumruy Pro', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #6b7a99;
+  line-height: 1.6;
+}
+
+/* =====================================================
+   7) OPTIONAL: shiny silver text (add class="silver" to a span)
+   ===================================================== */
+.silver {
+  background: linear-gradient(180deg, #ffffff 0%, #d9dde3 50%, #b8bec7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(2px 2px 3px rgba(0,0,0,.8));
+}
