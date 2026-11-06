@@ -1,5 +1,6 @@
-css
-/* =====================================================
+ <style>
+
+      /* =====================================================
    1) SETTINGS - PUT YOUR IMAGES HERE
       (file name or full https:// link)
    ===================================================== */
@@ -404,3 +405,5 @@ body.front-locked { overflow: hidden; }
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(2px 2px 3px rgba(0,0,0,.8));
 }
+    </style>
+
