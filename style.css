@@ -8,7 +8,343 @@
   --page-image:  none;                  /* optional picture behind the card */
 
   --gold: #e8c77d;                      /* gold used for small text and icons */
-  --title-color: #f4e6b8;               /* big title color in the card */
+  --title-color: #f4<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Page Title -->
+    <title>សិរីមង្គលអាពាហ៍ពិពាហ៍ ពុធ ចាន់ធារ៉ា ❤️ ឌីណេ រ៉ានីនីសា</title>
+
+    <!-- Open Graph / Link Preview Meta Tags -->
+    <meta property="og:url" content="https://theapka.com/wedding-20251124032118-1354" />
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:title" content="សិរីមង្គលអាពាហ៍ពិពាហ៍ ពុធ ចាន់ធារ៉ា ❤️ ឌីណេ រ៉ានីនីសា" />
+    <meta property="og:description" content="សិរីមង្គលអាពាហ៍ពិពាហ៍ ពុធ ចាន់ធារ៉ា ❤️ ឌីណេ រ៉ានីនីសា" />
+    <meta property="og:image" content="https://theapka.com/og-images/background/effect=thumbnail,quality=85/01J4TYS7MK4C29A1T4EDG4V9JZ.jpg" />
+
+    <!-- Twitter Preview Meta Tags -->
+    <meta name="twitter:image" content="https://theapka.com/og-images/background/effect=thumbnail,quality=85/01J4TYS7MK4C29A1T4EDG4V9JZ.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto&family=Pacifico&family=Montserrat&family=Ovo&family=Kantumruy+Pro&family=Great+Vibes&family=Dancing+Script&family=Moul&family=Battambang&family=Fasthand&family=Moulpali&family=Wix+Madefor+Display:wght@400;500;600;700&display=swap" />
+
+    <!-- External Libraries & Date Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/km.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/en.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/date-fns@3.6.0/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/date-fns@3.6.0/locale/km/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/date-fns@3.6.0/locale/en-US/cdn.min.js"></script>
+
+    <!-- YOUR JAVASCRIPT: must stay BEFORE the Alpine line below -->
+    <script src="script.js" defer></script>
+
+    <!-- AlpineJS & Add To Calendar -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer></script>
+
+    <!-- Template Stylesheet -->
+    <link rel="stylesheet" href="https://theapka.com/storage/templates/chhay/style.css?v2.8" />
+
+    <!-- YOUR CSS (all the styling is in this file) -->
+    <link rel="stylesheet" href="custom.css" />
+
+</head>
+
+
+
+<body class="front-locked">
+
+    <!-- SONG: put your song file name in src (it starts after clicking open) -->
+    <audio id="bg-music" src="Download.mp4" preload="auto" loop></audio>
+
+
+    <!-- ===== FRONT PAGE (first screen) ===== -->
+    <section id="front-page">
+        <div class="fp-content">
+            <div class="drop-line" style="--i:1;">
+                <span style="--i:1; font-family: 'Moul', sans-serif; font-size: 1.8rem; color: #dfe4ea; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">សិរីមង្គលអាពាហ៍ពិពាហ៍</span>
+            </div>
+
+            <div class="drop-line">
+                <span style="--i:2; font-family: 'Great Vibes', cursive; font-size: 2.2rem; color: #ffffff; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">The Wedding Day</span>
+            </div>
+
+            <div class="fp-names">
+                <div class="drop-line">
+                    <span style="--i:3; font-family: 'Moul', sans-serif; font-size: 1.6rem; color: #dfe4ea; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">ពុធ ចាន់ធារ៉ា</span>
+                </div>
+                <img src="https://theapka.com/storage/templates/chhay/images/2hearts.gif" alt="" />
+                <div class="drop-line">
+                    <span style="--i:4; font-family: 'Moul', sans-serif; font-size: 1.6rem; color: #dfe4ea; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">ឌីណេ រ៉ានីនីសា</span>
+                </div>
+            </div>
+
+            <div class="fp-invite">សូមគោរពអញ្ជើញ</div>
+            <div class="fp-frame" id="fp-guest">&nbsp;</div>
+
+            <div>
+                <button type="button" class="fp-btn" id="fp-open">បើកធៀប</button>
+            </div>
+        </div>
+    </section>
+    <!-- ===== END FRONT PAGE ===== -->
+
+
+
+    <div id="theapka-template">
+
+        <!-- Language Switcher -->
+        <div class="fixed z-50 top-4 right-4 font-kantumruy" x-data>
+            <button @click="$store.lang.toggle()"
+                class="flex items-center gap-2 px-3 py-2 text-white transition-all rounded-full bg-black/30 hover:bg-black/40">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path
+                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                    </path>
+                </svg>
+                <span class="text-sm font-medium"
+                    x-text="$store.lang.current === 'km' ? $store.lang.text.switch_to_english : $store.lang.text.switch_to_khmer"></span>
+            </button>
+        </div>
+
+        <div class="flex flex-wrap max-w-xl mx-auto">
+
+            <!-- ===== COVER CARD (the page after clicking open) =====
+                 Card photo: change --card-image in custom.css -->
+            <main class="card" id="card">
+
+                <div class="card-content">
+
+                    <!-- TOP: title -->
+                    <h1 class="title">សិរីមង្គលអាពាហ៍ពិពាហ៍</h1>
+
+                    <!-- MIDDLE: script text + names -->
+                    <div>
+                        <div class="script">The Wedding Day</div>
+                        <div class="names">
+                            <span>ពុធ ចាន់ធារ៉ា</span>
+                            <svg viewBox="0 0 24 24" fill="#e8c77d" aria-hidden="true">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                            <span>ឌីណេ រ៉ានីនីសា</span>
+                        </div>
+                    </div>
+
+                    <!-- BOTTOM: date, time, place -->
+                    <div>
+                        <div class="save">SAVE THE DATE</div>
+                        <div class="date-km">ថ្ងៃសុក្រ ទី១១ ខែធ្នូ ឆ្នាំ២០២៦</div>
+                        <div class="time-km">ម៉ោង ០៥ : ០០ ល្ងាច</div>
+                        <div class="date-num">11 . 12 . 2026 | 5:00 PM</div>
+                        <div class="place">
+                            <svg viewBox="0 0 24 24" fill="#e8c77d" aria-hidden="true">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                            </svg>
+                            <span>អគារ Building L, កោះពេជ្រ ភ្នំពេញ</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </main>
+            <!-- ===== END COVER CARD ===== -->
+
+
+            <!-- ===== SCHEDULE ===== -->
+            <section id="theapka-schedule-background" class="sch">
+                <div class="sch-inner">
+                    <div class="sch-title" x-data x-text="$store.lang.text.schedule">កម្មវិធីមង្គលអាពាហ៍ពិពាហ៍</div>
+                    <img class="sch-ornament" src="https://theapka.com/storage/templates/chhay/images/header_4.png" alt="" />
+
+                    <div class="sch-date">
+                        <span x-data="dateFormatter('2026-12-11')" x-text="formattedDate"></span>
+                    </div>
+
+                    <div class="sch-list">
+                        <div class="sch-item" x-data="timeFormatter('06:15:00')">
+                            <div class="sch-num">1</div>
+                            <div class="sch-body">
+                                <div class="sch-time" x-text="formattedTime"></div>
+                                <div class="sch-desc">ពិធីសែនក្រុងពាលី</div>
+                            </div>
+                        </div>
+
+                        <div class="sch-item" x-data="timeFormatter('07:15:00')">
+                            <div class="sch-num">2</div>
+                            <div class="sch-body">
+                                <div class="sch-time" x-text="formattedTime"></div>
+                                <div class="sch-desc">ពិធីហែជំនូន​ ( កំណត់ )    ចូលរោងជ័យ </div>
+                            </div>
+                        </div>
+
+                        <div class="sch-item" x-data="timeFormatter('07:45:00')">
+                            <div class="sch-num">3</div>
+                            <div class="sch-body">
+                                <div class="sch-time" x-text="formattedTime"></div>
+                                <div class="sch-desc">ពិធីជំនុំជើងការ និងពិសារស្លាកំណត់ ( រៀបរាប់ផ្លែឈើ ) ពិធីបំពាក់ចិញ្ចៀន</div>
+                            </div>
+                        </div>
+
+                        <div class="sch-item" x-data="timeFormatter('08:15:00')">
+                            <div class="sch-num">4</div>
+                            <div class="sch-body">
+                                <div class="sch-time" x-text="formattedTime"></div>
+                                <div class="sch-desc">ពិធីសូត្រមន្តចម្រើនព្រះបវិត្ត</div>
+                            </div>
+                        </div>
+
+                        <div class="sch-item" x-data="timeFormatter('09:45:00')">
+                            <div class="sch-num">5</div>
+                            <div class="sch-body">
+                                <div class="sch-time" x-text="formattedTime"></div>
+                                <div class="sch-desc">ពិធីកាត់សក់បង្កក់សិរី</div>
+                            </div>
+                        </div>
+
+                        <div class="sch-item" x-data="timeFormatter('11:15:00')">
+                            <div class="sch-num">6</div>
+                            <div class="sch-body">
+                                <div class="sch-time" x-text="formattedTime"></div>
+                                <div class="sch-desc">ពិធីបង្វិលពពិល និងសំពះផ្ទឺមសែនចងដៃ​ បាចផ្កាស្លានិងព្រះថោងតោងស្បៃ</div>
+                            </div>
+                        </div>
+
+                        <div class="sch-item" x-data="timeFormatter('11:30:00')">
+                            <div class="sch-num">7</div>
+                            <div class="sch-body">
+                                <div class="sch-time" x-text="formattedTime"></div>
+                                <div class="sch-desc">អញ្ជើញភ្ញៀវកិត្តិយសពិសារអាហារ​ថ្ងៃត្រង់</div>
+                            </div>
+                        </div>
+
+                        <div class="sch-item" x-data="timeFormatter('17:00:00')">
+                            <div class="sch-num">8</div>
+                            <div class="sch-body">
+                                <div class="sch-time" x-text="formattedTime"></div>
+                                <div class="sch-desc">អញ្ជើញភ្ញៀវកិត្តិយសពិសារភោជនាហារ ពេលល្ងាច</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ===== END SCHEDULE ===== -->
+
+
+            <!-- ===== LOCATION ===== -->
+            <div class="w-full my-12 text-center" x-data>
+                <div class="my-4 font-invite" :class="{ 'text-2xl': $store.lang.current !== 'km' }"
+                    x-text="$store.lang.text.location">ទីតាំងកម្មវិធីមង្គល</div>
+                <div class="relative w-full max-w-xl mx-auto mb-4 font-dangrek">
+                    <div>
+                        ទីតាំង  :    Seven Bright King TK ភ្នំពេញ
+                    </div>
+                    <div class="flex justify-center mt-5 mb-5">
+                        <img src="qr.png" alt="Location QR code" width="250" height="250" />
+                    </div>
+                    <a href="https://maps.app.goo.gl/fPXBUFR1z3eyiQG28" class="text-center text-blue-500 underline text-md"
+                        target="_blank">
+                        https://maps.app.goo.gl/fPXBUFR1z3eyiQG28
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- ===== GIFT (ចំណងដៃ) ===== -->
+            <div class="w-full pb-12 text-center" x-data="{ open: false }">
+                <button @click="open = !open"
+                    class="px-10 py-3 text-xl text-white transition-colors duration-300 rounded-full shadow-lg bg-amber-600 hover:bg-amber-700 font-moulpali animate-breathing focus:outline-none">
+                    ចំណងដៃ
+                </button>
+
+                <div x-show="open" x-cloak x-transition:enter="transition ease-out duration-300"
+                    x-transition:enter-start="opacity-0 transform -translate-y-4"
+                    x-transition:enter-end="opacity-100 transform translate-y-0"
+                    x-transition:leave="transition ease-in duration-200"
+                    x-transition:leave-start="opacity-100 transform translate-y-0"
+                    x-transition:leave-end="opacity-0 transform -translate-y-4"
+                    class="max-w-xl px-4 mx-auto mt-8">
+
+                    <div class="flex flex-col items-center justify-center gap-8 sm:flex-row">
+                        <div class="p-2 bg-white border-2 rounded-lg shadow-xl">
+                            <img src="photo_2026-11-02_15-25-10.jpg" alt="KHQR Code 1"
+                                class="object-contain w-100 h-100 md:w-65 md:h-65">
+                            <p class="mt-2 text-sm font-kantumruy">ស្កេនដើម្បី​ចូលរួម​ចំណងដៃ</p>
+                        </div>
+
+                        <div class="p-2 bg-white border-2 rounded-lg shadow-xl">
+                            <img src="download.png" alt="KHQR Code 2"
+                                class="object-contain w-100 h-100 md:w-65 md:h-65">
+                            <p class="mt-2 text-sm font-kantumruy">ស្កេនដើម្បី​ចូលរួម​ចំណងដៃ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ===== THANK YOU ===== -->
+            <div id="theapka-thank-you"
+                class="w-full text-center h-[750px] bg-center bg-cover bg-no-repeat relative"
+                style="background-image: url('AP3I9320.jpg');">
+                <div class="z-0 w-full h-full bg-white opacity-30"></div>
+                <div
+                    class="absolute w-full px-3 mx-auto text-center text-white transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-1">
+                    <div class="max-w-xl p-2 mx-auto mt-24 text-xl leading-8 font-dangrek rounded-2xl"
+                        style="background: #cfbdb470">
+                        <img src="https://theapka.com/storage/templates/chhay/images/thank.gif" class="h-24 mx-auto"
+                            alt="" />
+                        <div class="justify-between mt-4" x-data x-text="$store.lang.text.thank_you_message">
+                            វត្តមានឯកឧត្តម លោកឧកញ៉ា លោកជំទាវ លោក លោកស្រី អ្នកនាងកញ្ញា
+                            ជាកិត្តិយសដ៏ឧត្តុង្គឧត្តម ចំពោះគ្រួសាររបស់យើងខ្ញុំ។
+                        </div>
+                        <div class="flex justify-center mx-auto">
+                            <img src="https://theapka.com/storage/templates/chhay/images/flower_2.gif" class="h-12"
+                                alt="" /><img
+                                src="https://theapka.com/storage/templates/chhay/images/flower_2.gif" class="h-12"
+                                alt="" /><img
+                                src="https://theapka.com/storage/templates/chhay/images/flower_2.gif" class="h-12"
+                                alt="" /><img
+                                src="https://theapka.com/storage/templates/chhay/images/flower_2.gif" class="h-12"
+                                alt="" /><img
+                                src="https://theapka.com/storage/templates/chhay/images/flower_2.gif" class="h-12"
+                                alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QVZMMNMRX9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-QVZMMNMRX9');
+    </script>
+    <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"6b187b7e88044e329324dc2dc359cf69","r":1,"spa":2}' crossorigin="anonymous"></script>
+
+</body>
+
+</html>e6b8;               /* big title color in the card */
 }
 
 /* =====================================================
