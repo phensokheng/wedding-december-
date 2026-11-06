@@ -1,13 +1,50 @@
 <!DOCTYPE html>
 <html>
 
-
-
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
- <script>
+    <!-- Page Title -->
+    <title>សិរីមង្គលអាពាហ៍ពិពាហ៍ ពុធ ចាន់ធារ៉ា ❤️ ឌីណេ រ៉ានីនីសា</title>
+
+    <!-- Open Graph / Link Preview Meta Tags -->
+    <meta property="og:url" content="https://theapka.com/wedding-20251124032118-1354" />
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:title" content="សិរីមង្គលអាពាហ៍ពិពាហ៍ ពុធ ចាន់ធារ៉ា ❤️ ឌីណេ រ៉ានីនីសា" />
+    <meta property="og:description" content="សិរីមង្គលអាពាហ៍ពិពាហ៍ ពុធ ចាន់ធារ៉ា ❤️ ឌីណេ រ៉ានីនីសា" />
+    <meta property="og:image" content="https://theapka.com/og-images/background/effect=thumbnail,quality=85/01J4TYS7MK4C29A1T4EDG4V9JZ.jpg" />
+
+    <!-- Twitter Preview Meta Tags -->
+    <meta name="twitter:image" content="https://theapka.com/og-images/background/effect=thumbnail,quality=85/01J4TYS7MK4C29A1T4EDG4V9JZ.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dangrek&family=Roboto&family=Pacifico&family=Montserrat&family=Ovo&family=Kantumruy+Pro&family=Great+Vibes&family=Dancing+Script&family=Moul&family=Battambang&family=Fasthand&family=Moulpali&family=Wix+Madefor+Display:wght@400;500;600;700&display=swap" />
+
+    <!-- External Libraries & Date Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/km.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/en.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/date-fns@3.6.0/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/date-fns@3.6.0/locale/km/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/date-fns@3.6.0/locale/en-US/cdn.min.js"></script>
+
+    <!-- AlpineJS & Add To Calendar -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer></script>
+
+    <!-- Template Stylesheet -->
+    <link rel="stylesheet" href="https://theapka.com/storage/templates/chhay/style.css?v2.8" />
+
+    <!-- YOUR CSS (all the styling is in this file) -->
+    <link rel="stylesheet" href="custom.css" />
+
+
+    <script>
         window.guestName = "";
     </script>
 
@@ -29,8 +66,6 @@
     </script>
 
     <script>
-
-    
         document.addEventListener('alpine:init', () => {
             Alpine.store('lang', {
                 current: localStorage.getItem('language') || 'km',
@@ -189,35 +224,36 @@
             }
         }
     </script>
-    
+
 </head>
 
 
 
 <body class="front-locked">
-    <!-- PUT IT HERE (Inside the body, near the bottom) -->
-  <audio id="bg-music" src="Download.mp4" preload="auto" loop></audio>
-    
+
+    <!-- SONG: put your song file name in src (it starts after clicking open) -->
+    <audio id="bg-music" src="Download.mp4" preload="auto" loop></audio>
+
 
     <!-- ===== FRONT PAGE (first screen) ===== -->
     <section id="front-page">
         <div class="fp-content">
-             <!-- ជួរទី ១ ៖ សិរីមង្គលអាពាហ៍ពិពាហ៍ -->
             <div class="drop-line" style="--i:1;">
-    <span style="--i:1; font-family: 'Moul', sans-serif; font-size: 1.8rem; color: #dfe4ea; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">សិរីមង្គលអាពាហ៍ពិពាហ៍</span>
-  </div>
+                <span style="--i:1; font-family: 'Moul', sans-serif; font-size: 1.8rem; color: #dfe4ea; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">សិរីមង្គលអាពាហ៍ពិពាហ៍</span>
+            </div>
 
             <div class="drop-line">
-    <span style="--i:2; font-family: 'Great Vibes', cursive; font-size: 2.2rem; color: #ffffff; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">The Wedding Day</span> <!-- cite: 3 -->
-  </div>
+                <span style="--i:2; font-family: 'Great Vibes', cursive; font-size: 2.2rem; color: #ffffff; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">The Wedding Day</span>
+            </div>
+
             <div class="fp-names">
-            <div class="drop-line">
-  <span style="--i:3; font-family: 'Moul', sans-serif; font-size: 1.6rem; color: #dfe4ea; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">ពុធ ចាន់ធារ៉ា</span>
-  </div>
+                <div class="drop-line">
+                    <span style="--i:3; font-family: 'Moul', sans-serif; font-size: 1.6rem; color: #dfe4ea; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">ពុធ ចាន់ធារ៉ា</span>
+                </div>
                 <img src="https://theapka.com/storage/templates/chhay/images/2hearts.gif" alt="" />
-            <div class="drop-line">
-    <span style="--i:4; font-family: 'Moul', sans-serif; font-size: 1.6rem; color: #dfe4ea; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">ឌីណេ រ៉ានីនីសា</span> <!-- cite: 3 -->
-  </div>
+                <div class="drop-line">
+                    <span style="--i:4; font-family: 'Moul', sans-serif; font-size: 1.6rem; color: #dfe4ea; text-shadow: 2px 2px 4px rgba(0,0,0,0.8);">ឌីណេ រ៉ានីនីសា</span>
+                </div>
             </div>
 
             <div class="fp-invite">សូមគោរពអញ្ជើញ</div>
@@ -229,7 +265,7 @@
         </div>
     </section>
     <!-- ===== END FRONT PAGE ===== -->
-     
+
 
 
     <div id="theapka-template">
@@ -250,141 +286,149 @@
                     x-text="$store.lang.current === 'km' ? $store.lang.text.switch_to_english : $store.lang.text.switch_to_khmer"></span>
             </button>
         </div>
+
         <div class="flex flex-wrap max-w-xl mx-auto">
-            <!-- COVER IMAGE: put your image file name or https:// link in url('...') below -->
-          
-  <main class="card" id="card">
 
-    <div class="card-content">
+            <!-- ===== COVER CARD (the page after clicking open) =====
+                 Card photo: change --card-image in custom.css -->
+            <main class="card" id="card">
 
-      <!-- TOP: title -->
-      <h1 class="title">សិរីមង្គលអាពាហ៍ពិពាហ៍</h1>
+                <div class="card-content">
 
-      <!-- MIDDLE: script text + names -->
-      <div>
-        <div class="script">The Wedding Day</div>
-        <div class="names">
-          <span>ពុធ ចាន់ធារ៉ា</span>
-          <svg viewBox="0 0 24 24" fill="#e8c77d" aria-hidden="true">
-            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-          </svg>
-          <span>ឌីណេ រ៉ានីនីសា</span>
-        </div>
-      </div>
+                    <!-- TOP: title -->
+                    <h1 class="title">សិរីមង្គលអាពាហ៍ពិពាហ៍</h1>
 
-      <!-- BOTTOM: date, time, place -->
-      <div>
-        <div class="save">SAVE THE DATE</div>
-        <div class="date-km">ថ្ងៃសុក្រ ទី១១ ខែធ្នូ ឆ្នាំ២០២៦</div>
-        <div class="time-km">ម៉ោង ០៥ : ០០ ល្ងាច</div>
-        <div class="date-num">11 . 12 . 2026 | 5:00 PM</div>
-        <div class="place">
-          <svg viewBox="0 0 24 24" fill="#e8c77d" aria-hidden="true">
-            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-          </svg>
-          <span>អគារ Building L, កោះពេជ្រ ភ្នំពេញ</span>
-        </div>
-      </div>
+                    <!-- MIDDLE: script text + names -->
+                    <div>
+                        <div class="script">The Wedding Day</div>
+                        <div class="names">
+                            <span>ពុធ ចាន់ធារ៉ា</span>
+                            <svg viewBox="0 0 24 24" fill="#e8c77d" aria-hidden="true">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                            </svg>
+                            <span>ឌីណេ រ៉ានីនីសា</span>
+                        </div>
+                    </div>
 
-    </div>
+                    <!-- BOTTOM: date, time, place -->
+                    <div>
+                        <div class="save">SAVE THE DATE</div>
+                        <div class="date-km">ថ្ងៃសុក្រ ទី១១ ខែធ្នូ ឆ្នាំ២០២៦</div>
+                        <div class="time-km">ម៉ោង ០៥ : ០០ ល្ងាច</div>
+                        <div class="date-num">11 . 12 . 2026 | 5:00 PM</div>
+                        <div class="place">
+                            <svg viewBox="0 0 24 24" fill="#e8c77d" aria-hidden="true">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                            </svg>
+                            <span>អគារ Building L, កោះពេជ្រ ភ្នំពេញ</span>
+                        </div>
+                    </div>
 
-  </main>
-
-  <script>
-    // Falling petals: change 28 to have more or fewer
-    (function () {
-      var card = document.getElementById('card');
-      for (var i = 0; i < 28; i++) {
-        var p = document.createElement('span');
-        var size = 5 + Math.random() * 7;
-        p.className = 'petal';
-        p.style.left = Math.random() * 100 + '%';
-        p.style.width = size + 'px';
-        p.style.height = size * 1.2 + 'px';
-        p.style.animationDuration = 7 + Math.random() * 8 + 's';
-        p.style.animationDelay = -Math.random() * 15 + 's';
-        card.appendChild(p);
-      }
-    })();
-  </script>
-
-
-        <!-- ===== SCHEDULE ===== -->
-<section id="theapka-schedule-background" class="sch">
-    <div class="sch-inner">
-        <div class="sch-title" x-data x-text="$store.lang.text.schedule">កម្មវិធីមង្គលអាពាហ៍ពិពាហ៍</div>
-        <img class="sch-ornament" src="https://theapka.com/storage/templates/chhay/images/header_4.png" alt="" />
-
-        <div class="sch-date">
-            <span x-data="dateFormatter('2026-12-11')" x-text="formattedDate"></span>
-        </div>
-
-        <div class="sch-list">
-            <div class="sch-item" x-data="timeFormatter('06:15:00')">
-                <div class="sch-num">1</div>
-                <div class="sch-body">
-                    <div class="sch-time" x-text="formattedTime"></div>
-                    <div class="sch-desc">ពិធីសែនក្រុងពាលី</div>
                 </div>
-            </div>
 
-            <div class="sch-item" x-data="timeFormatter('07:15:00')">
-                <div class="sch-num">2</div>
-                <div class="sch-body">
-                    <div class="sch-time" x-text="formattedTime"></div>
-                    <div class="sch-desc">ពិធីហែជំនូន​ ( កំណត់ )    ចូលរោងជ័យ </div>
-                </div>
-            </div>
+            </main>
 
-            <div class="sch-item" x-data="timeFormatter('07:45:00')">
-                <div class="sch-num">3</div>
-                <div class="sch-body">
-                    <div class="sch-time" x-text="formattedTime"></div>
-                    <div class="sch-desc">ពិធីជំនុំជើងការ និងពិសារស្លាកំណត់ ( រៀបរាប់ផ្លែឈើ ) ពិធីបំពាក់ចិញ្ចៀន</div>
-                </div>
-            </div>
+            <script>
+                // Falling petals in the card: change 28 to have more or fewer
+                (function () {
+                    var card = document.getElementById('card');
+                    for (var i = 0; i < 28; i++) {
+                        var p = document.createElement('span');
+                        var size = 5 + Math.random() * 7;
+                        p.className = 'petal';
+                        p.style.left = Math.random() * 100 + '%';
+                        p.style.width = size + 'px';
+                        p.style.height = size * 1.2 + 'px';
+                        p.style.animationDuration = 7 + Math.random() * 8 + 's';
+                        p.style.animationDelay = -Math.random() * 15 + 's';
+                        card.appendChild(p);
+                    }
+                })();
+            </script>
+            <!-- ===== END COVER CARD ===== -->
 
-            <div class="sch-item" x-data="timeFormatter('08:15:00')">
-                <div class="sch-num">4</div>
-                <div class="sch-body">
-                    <div class="sch-time" x-text="formattedTime"></div>
-                    <div class="sch-desc">ពិធីសូត្រមន្តចម្រើនព្រះបវិត្ត</div>
-                </div>
-            </div>
 
-            <div class="sch-item" x-data="timeFormatter('09:45:00')">
-                <div class="sch-num">5</div>
-                <div class="sch-body">
-                    <div class="sch-time" x-text="formattedTime"></div>
-                    <div class="sch-desc">ពិធីកាត់សក់បង្កក់សិរី</div>
-                </div>
-            </div>
+            <!-- ===== SCHEDULE ===== -->
+            <section id="theapka-schedule-background" class="sch">
+                <div class="sch-inner">
+                    <div class="sch-title" x-data x-text="$store.lang.text.schedule">កម្មវិធីមង្គលអាពាហ៍ពិពាហ៍</div>
+                    <img class="sch-ornament" src="https://theapka.com/storage/templates/chhay/images/header_4.png" alt="" />
 
-            <div class="sch-item" x-data="timeFormatter('11:15:00')">
-                <div class="sch-num">6</div>
-                <div class="sch-body">
-                    <div class="sch-time" x-text="formattedTime"></div>
-                    <div class="sch-desc">ពិធីបង្វិលពពិល និងសំពះផ្ទឺមសែនចងដៃ​ បាចផ្កាស្លានិងព្រះថោងតោងស្បៃ</div>
-                </div>
-            </div>
+                    <div class="sch-date">
+                        <span x-data="dateFormatter('2026-12-11')" x-text="formattedDate"></span>
+                    </div>
 
-            <div class="sch-item" x-data="timeFormatter('11:30:00')">
-                <div class="sch-num">7</div>
-                <div class="sch-body">
-                    <div class="sch-time" x-text="formattedTime"></div>
-                    <div class="sch-desc">អញ្ជើញភ្ញៀវកិត្តិយសពិសារអាហារ​ថ្ងៃត្រង់</div>
+                    <div class="sch-list">
+                        <div class="sch-item" x-data="timeFormatter('06:15:00')">
+                            <div class="sch-num">1</div>
+                            <div class="sch-body">
+                                <div class="sch-time" x-text="formattedTime"></div>
+                                <div class="sch-desc">ពិធីសែនក្រុងពាលី</div>
+                            </div>
+                        </div>
+
+                        <div class="sch-item" x-data="timeFormatter('07:15:00')">
+                            <div class="sch-num">2</div>
+                            <div class="sch-body">
+                                <div class="sch-time" x-text="formattedTime"></div>
+                                <div class="sch-desc">ពិធីហែជំនូន​ ( កំណត់ )    ចូលរោងជ័យ </div>
+                            </div>
+                        </div>
+
+                        <div class="sch-item" x-data="timeFormatter('07:45:00')">
+                            <div class="sch-num">3</div>
+                            <div class="sch-body">
+                                <div class="sch-time" x-text="formattedTime"></div>
+                                <div class="sch-desc">ពិធីជំនុំជើងការ និងពិសារស្លាកំណត់ ( រៀបរាប់ផ្លែឈើ ) ពិធីបំពាក់ចិញ្ចៀន</div>
+                            </div>
+                        </div>
+
+                        <div class="sch-item" x-data="timeFormatter('08:15:00')">
+                            <div class="sch-num">4</div>
+                            <div class="sch-body">
+                                <div class="sch-time" x-text="formattedTime"></div>
+                                <div class="sch-desc">ពិធីសូត្រមន្តចម្រើនព្រះបវិត្ត</div>
+                            </div>
+                        </div>
+
+                        <div class="sch-item" x-data="timeFormatter('09:45:00')">
+                            <div class="sch-num">5</div>
+                            <div class="sch-body">
+                                <div class="sch-time" x-text="formattedTime"></div>
+                                <div class="sch-desc">ពិធីកាត់សក់បង្កក់សិរី</div>
+                            </div>
+                        </div>
+
+                        <div class="sch-item" x-data="timeFormatter('11:15:00')">
+                            <div class="sch-num">6</div>
+                            <div class="sch-body">
+                                <div class="sch-time" x-text="formattedTime"></div>
+                                <div class="sch-desc">ពិធីបង្វិលពពិល និងសំពះផ្ទឺមសែនចងដៃ​ បាចផ្កាស្លានិងព្រះថោងតោងស្បៃ</div>
+                            </div>
+                        </div>
+
+                        <div class="sch-item" x-data="timeFormatter('11:30:00')">
+                            <div class="sch-num">7</div>
+                            <div class="sch-body">
+                                <div class="sch-time" x-text="formattedTime"></div>
+                                <div class="sch-desc">អញ្ជើញភ្ញៀវកិត្តិយសពិសារអាហារ​ថ្ងៃត្រង់</div>
+                            </div>
+                        </div>
+
+                        <div class="sch-item" x-data="timeFormatter('17:00:00')">
+                            <div class="sch-num">8</div>
+                            <div class="sch-body">
+                                <div class="sch-time" x-text="formattedTime"></div>
+                                <div class="sch-desc">អញ្ជើញភ្ញៀវកិត្តិយសពិសារភោជនាហារ ពេលល្ងាច</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="sch-item" x-data="timeFormatter('17:00:00')">
-                <div class="sch-num">8</div>
-                <div class="sch-body">
-                    <div class="sch-time" x-text="formattedTime"></div>
-                    <div class="sch-desc">អញ្ជើញភ្ញៀវកិត្តិយសពិសារភោជនាហារ ពេលល្ងាច</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+            </section>
+            <!-- ===== END SCHEDULE ===== -->
+
+
+            <!-- ===== LOCATION ===== -->
             <div class="w-full my-12 text-center" x-data>
                 <div class="my-4 font-invite" :class="{ 'text-2xl': $store.lang.current !== 'km' }"
                     x-text="$store.lang.text.location">ទីតាំងកម្មវិធីមង្គល</div>
@@ -393,8 +437,7 @@
                         ទីតាំង  :    Seven Bright King TK ភ្នំពេញ
                     </div>
                     <div class="flex justify-center mt-5 mb-5">
-<img src="qr.png" alt="Location QR code" width="250" height="250" />
-
+                        <img src="qr.png" alt="Location QR code" width="250" height="250" />
                     </div>
                     <a href="https://maps.app.goo.gl/fPXBUFR1z3eyiQG28" class="text-center text-blue-500 underline text-md"
                         target="_blank">
@@ -404,6 +447,7 @@
             </div>
 
 
+            <!-- ===== GIFT (ចំណងដៃ) ===== -->
             <div class="w-full pb-12 text-center" x-data="{ open: false }">
                 <button @click="open = !open"
                     class="px-10 py-3 text-xl text-white transition-colors duration-300 rounded-full shadow-lg bg-amber-600 hover:bg-amber-700 font-moulpali animate-breathing focus:outline-none">
@@ -435,6 +479,7 @@
             </div>
 
 
+            <!-- ===== THANK YOU ===== -->
             <div id="theapka-thank-you"
                 class="w-full text-center h-[750px] bg-center bg-cover bg-no-repeat relative"
                 style="background-image: url('AP3I9320.jpg');">
@@ -464,11 +509,12 @@
                     </div>
                 </div>
             </div>
+
         </div>
 
-
-
     </div>
+
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-QVZMMNMRX9"></script>
     <script>
@@ -481,106 +527,47 @@
 
         gtag('config', 'G-QVZMMNMRX9');
     </script>
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"6b187b7e88044e329324dc2dc359cf69","r":1,"spa":2}' crossorigin="anonymous"></script>
+    <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"6b187b7e88044e329324dc2dc359cf69","r":1,"spa":2}' crossorigin="anonymous"></script>
+
+
+    <!-- ===== FRONT PAGE SCRIPT (one script only) ===== -->
     <script>
-        // Front page: optional guest name from the link, e.g. ?guest=សុខា
         (function () {
+            // Optional guest name from the link, e.g. ?guest=សុខា
             var guest = new URLSearchParams(location.search).get('guest');
             if (guest) document.getElementById('fp-guest').textContent = guest;
 
-            // Click "open": unlock scrolling and slide down to the invitation
+            // Falling gold hearts: they start ONLY after clicking open
+            var heartsStarted = false;
+            function startHearts() {
+                if (heartsStarted) return;
+                heartsStarted = true;
+
+                var heartCount = 10; // number of falling hearts
+                for (var i = 0; i < heartCount; i++) {
+                    var heart = document.createElement('span');
+                    heart.className = 'gold-heart';
+                    heart.style.left = Math.random() * 100 + '%';
+                    heart.style.animationDuration = 5 + Math.random() * 7 + 's';
+                    heart.style.animationDelay = -Math.random() * 10 + 's';
+                    document.body.appendChild(heart);
+                }
+            }
+
+            // Click "open": play the song, start the hearts, unlock scrolling, slide down
             document.getElementById('fp-open').addEventListener('click', function () {
+                var music = document.getElementById('bg-music');
+                if (music) music.play().catch(function () {});
+
+                startHearts();
                 document.body.classList.remove('front-locked');
                 setTimeout(function () {
                     document.getElementById('theapka-template').scrollIntoView({ behavior: 'smooth' });
                 }, 50);
             });
         })();
-        
-   script>
-    // Front page: optional guest name from the link, e.g. ?guest=សុខា
-    (function () {
-        var guest = new URLSearchParams(location.search).get('guest');
-        if (guest) document.getElementById('fp-guest').textContent = guest;
-
-        // Falling gold hearts: they start ONLY after clicking open
-        var heartsStarted = false;
-        function startHearts() {
-            if (heartsStarted) return;
-            heartsStarted = true;
-
-            var heartCount = 10; // number of falling hearts
-            for (var i = 0; i < heartCount; i++) {
-                var heart = document.createElement('span');
-                heart.className = 'gold-heart';
-                heart.style.left = Math.random() * 100 + '%';
-                heart.style.animationDuration = 5 + Math.random() * 7 + 's';
-                heart.style.animationDelay = -Math.random() * 10 + 's';
-                document.body.appendChild(heart);
-            }
-        }
-
-        // Click "open": start the hearts, unlock scrolling and slide down to the invitation
-        document.getElementById('fp-open').addEventListener('click', function () {
-            startHearts();
-            document.body.classList.remove('front-locked');
-            setTimeout(function () {
-                document.getElementById('theapka-template').scrollIntoView({ behavior: 'smooth' });
-            }, 50);
-        });
-    })();
-
-   
     </script>
-    <script>
-    // Front page: optional guest name from the link, e.g. ?guest=សុខា
-    (function () {
-        var guest = new URLSearchParams(location.search).get('guest');
-        if (guest) document.getElementById('fp-guest').textContent = guest;
 
-        // Falling gold hearts: they start ONLY after clicking open
-        var heartsStarted = false;
-        function startHearts() {
-            if (heartsStarted) return;
-            heartsStarted = true;
-
-            var heartCount = 10; // number of falling hearts
-            for (var i = 0; i < heartCount; i++) {
-                var heart = document.createElement('span');
-                heart.className = 'gold-heart';
-                heart.style.left = Math.random() * 100 + '%';
-                heart.style.animationDuration = 5 + Math.random() * 7 + 's';
-                heart.style.animationDelay = -Math.random() * 10 + 's';
-                document.body.appendChild(heart);
-            }
-        }
-
-        // Click "open": start the hearts, unlock scrolling and slide down to the invitation
-        document.getElementById('fp-open').addEventListener('click', function () {
-            startHearts();
-            document.body.classList.remove('front-locked');
-            setTimeout(function () {
-                document.getElementById('theapka-template').scrollIntoView({ behavior: 'smooth' });
-            }, 50);
-        });
-    })();
-
-    function openInvitation() {
-      var music = document.getElementById('bg-music');
-      if (music) {
-        music.play();
-      }
-
-      // ... rest of your openInvitation code ...
-    }
-
-
-    
-</script>
-
-
-    
 </body>
-
 
 </html>
