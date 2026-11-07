@@ -7,7 +7,7 @@
 :root {
   --front-image: url('AP3I9359.jpg');   /* front page (before clicking open) */
   --card-image:  url('AP3I9364.jpg');   /* cover card (after clicking open) */
-  --page-image:  none;                  /* optional picture behind the card */
+}
 
   --gold: #e8c77d;                      /* gold used for small text and icons */
   --title-color: #f4e6b8;               /* big title color in the card */
