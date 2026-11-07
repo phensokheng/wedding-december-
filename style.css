@@ -7,7 +7,8 @@
 :root {
   --front-image: url('https://phensokheng.github.io/wedding-december-/AP3I9359.jpg');
   --card-image:  url('https://phensokheng.github.io/wedding-december-/AP3I9364.jpg');
-}
+  --page-image:  none;                  /* optional picture behind the card */
+
 
   --gold: #e8c77d;                      /* gold used for small text and icons */
   --title-color: #f4e6b8;               /* big title color in the card */
